@@ -1,0 +1,7 @@
+2023-12-01 01:58:40.297 [info] [Info  - 1:58:40 AM] (49554) Pylance language server 2023.11.10 (pyright 088ebaa5) starting
+2023-12-01 01:58:40.299 [info] [Info  - 1:58:40 AM] (49554) Server root directory: /home/tianyi/.vscode-server/extensions/ms-python.vscode-pylance-2023.11.10/dist
+2023-12-01 01:58:40.299 [info] [Info  - 1:58:40 AM] (49554) Starting service instance "tianyi"
+2023-12-01 01:58:40.356 [info] [Info  - 1:58:40 AM] (49554) Setting pythonPath for service "tianyi": "/bin/python3"
+2023-12-01 01:58:40.356 [info] [Info  - 1:58:40 AM] (49554) Setting environmentName for service "tianyi": "3.9.2 (全局)"
+2023-12-01 01:58:40.407 [info] [Info  - 1:58:40 AM] (49554) Assuming Python version 3.9
+2023-12-01 01:58:40.479 [info] [Info  - 1:58:40 AM] (49554) Found 3 source files

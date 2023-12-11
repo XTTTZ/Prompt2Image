@@ -1,0 +1,6 @@
+Listening on 127.0.0.1:46651
+[2023-12-11 04:47:37] info Disposed of connection to running server.
+looking for token d805e00dc8e5, got Some("d805e00dc8e5")
+[2023-12-11 04:47:38] info Disposed of connection to running server.
+[2023-12-11 04:47:41] info Disposed of connection to running server.
+looking for token d805e00dc8e5, got Some("d805e00dc8e5")

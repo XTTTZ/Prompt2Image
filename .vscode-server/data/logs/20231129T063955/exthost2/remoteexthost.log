@@ -1,0 +1,15 @@
+2023-11-29 06:40:00.630 [info] Extension host with pid 42662 started
+2023-11-29 06:40:00.641 [info] Lock '/home/tianyi/.vscode-server/data/User/workspaceStorage/1ca46504101bce80483b3f356325aca3/vscode.lock': Lock acquired.
+2023-11-29 06:40:00.711 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-11-29 06:40:00.716 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: false, activationEvent: '*', root cause: vscode.git
+2023-11-29 06:40:00.844 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: '*'
+2023-11-29 06:40:00.845 [info] ExtensionService#_doActivateExtension vscode.github, startup: false, activationEvent: '*'
+2023-11-29 06:40:01.234 [info] Eager extensions activated
+2023-11-29 06:40:01.234 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-11-29 06:40:01.235 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-11-29 06:41:15.033 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-11-29 06:41:15.034 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2023-11-29 06:41:51.207 [info] ExtensionService#_doActivateExtension vscode.html-language-features, startup: false, activationEvent: 'onLanguage:html'
+2023-11-29 07:05:48.244 [info] Extension host terminating: received terminate message from renderer
+2023-11-29 07:05:48.244 [info] Lock '/home/tianyi/.vscode-server/data/User/workspaceStorage/1ca46504101bce80483b3f356325aca3/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+2023-11-29 07:05:48.277 [info] Extension host with pid 42662 exiting with code 0

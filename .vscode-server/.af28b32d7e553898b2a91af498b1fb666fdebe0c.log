@@ -1,0 +1,35 @@
+*
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+Server bound to 127.0.0.1:34709 (IPv4)
+Extension host agent listening on 34709
+
+[04:47:35] 
+
+
+
+
+[04:47:35] Extension host agent started.
+[04:47:35] Deleted uninstalled extension from disk ms-ceintl.vscode-language-pack-zh-hans /home/tianyi/.vscode-server/extensions/ms-ceintl.vscode-language-pack-zh-hans-1.84.2023111509
+[04:47:35] [127.0.0.1][9933ce4e][ManagementConnection] New connection established.
+[04:47:35] [127.0.0.1][016eac60][ExtensionHostConnection] New connection established.
+[04:47:35] [127.0.0.1][016eac60][ExtensionHostConnection] <243549> Launched Extension Host Process.
+[04:47:38] [127.0.0.1][9933ce4e][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[04:47:38] [127.0.0.1][016eac60][ExtensionHostConnection] <243549> Extension Host Process exited with code: 0, signal: null.
+Cancelling previous shutdown timeout
+[04:47:38] Cancelling previous shutdown timeout
+Last EH closed, waiting before shutting down
+[04:47:38] Last EH closed, waiting before shutting down
+Got delay-shutdown request while in shutdown timeout, delaying
+[04:47:39] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[04:47:39] Cancelling previous shutdown timeout
+[04:47:39] [127.0.0.1][19b0ba5c][ManagementConnection] New connection established.
+[04:47:40] [127.0.0.1][12ba6e71][ExtensionHostConnection] New connection established.
+[04:47:40] [127.0.0.1][12ba6e71][ExtensionHostConnection] <243765> Launched Extension Host Process.
+New EH opened, aborting shutdown
+[04:52:39] New EH opened, aborting shutdown

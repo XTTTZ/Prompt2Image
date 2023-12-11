@@ -1,0 +1,42 @@
+2023-12-11 03:40:18.790 [info] 
+
+
+
+
+2023-12-11 03:40:18.804 [info] Extension host agent started.
+2023-12-11 03:40:18.902 [info] Deleted uninstalled extension from disk ms-python.python /home/tianyi/.vscode-server/extensions/ms-python.python-2023.20.0
+2023-12-11 03:40:18.908 [info] [127.0.0.1][7f5f15a6][ManagementConnection] New connection established.
+2023-12-11 03:40:19.001 [info] [127.0.0.1][151ff336][ExtensionHostConnection] New connection established.
+2023-12-11 03:40:19.239 [info] [127.0.0.1][151ff336][ExtensionHostConnection] <235823> Launched Extension Host Process.
+2023-12-11 03:40:21.556 [info] [127.0.0.1][7f5f15a6][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-12-11 03:40:21.602 [info] [127.0.0.1][151ff336][ExtensionHostConnection] <235823> Extension Host Process exited with code: 0, signal: null.
+2023-12-11 03:40:21.603 [info] Cancelling previous shutdown timeout
+2023-12-11 03:40:21.603 [info] Last EH closed, waiting before shutting down
+2023-12-11 03:40:22.862 [info] Got delay-shutdown request while in shutdown timeout, delaying
+2023-12-11 03:40:22.862 [info] Cancelling previous shutdown timeout
+2023-12-11 03:40:23.004 [info] [127.0.0.1][e15c68c0][ManagementConnection] New connection established.
+2023-12-11 03:40:23.079 [info] [127.0.0.1][846aaead][ExtensionHostConnection] New connection established.
+2023-12-11 03:40:23.090 [info] [127.0.0.1][846aaead][ExtensionHostConnection] <236073> Launched Extension Host Process.
+2023-12-11 03:40:26.429 [info] Getting Manifest... ms-ceintl.vscode-language-pack-zh-hans
+2023-12-11 03:40:26.561 [info] Installing extension: ms-ceintl.vscode-language-pack-zh-hans
+2023-12-11 03:40:27.223 [warning] Extension signature verification failed with error 'ENOENT': ms-ceintl.vscode-language-pack-zh-hans
+2023-12-11 03:40:27.396 [info] Extracted extension to file:///home/tianyi/.vscode-server/extensions/ms-ceintl.vscode-language-pack-zh-hans-1.85.2023120618: ms-ceintl.vscode-language-pack-zh-hans
+2023-12-11 03:40:27.404 [info] Renamed to /home/tianyi/.vscode-server/extensions/ms-ceintl.vscode-language-pack-zh-hans-1.85.2023120618
+2023-12-11 03:40:27.407 [info] Extracting extension completed. ms-ceintl.vscode-language-pack-zh-hans
+2023-12-11 03:40:27.415 [info] Adding language packs from the extension ms-ceintl.vscode-language-pack-zh-hans
+2023-12-11 03:40:27.445 [info] Marked extension as uninstalled ms-ceintl.vscode-language-pack-zh-hans-1.84.2023111509
+2023-12-11 03:40:27.481 [info] Extension installed successfully: ms-ceintl.vscode-language-pack-zh-hans
+2023-12-11 03:45:22.865 [info] New EH opened, aborting shutdown
+2023-12-11 03:57:17.150 [info] [127.0.0.1][e15c68c0][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-12-11 03:57:17.217 [info] [127.0.0.1][846aaead][ExtensionHostConnection] <236073> Extension Host Process exited with code: 0, signal: null.
+2023-12-11 03:57:17.217 [info] Last EH closed, waiting before shutting down
+2023-12-11 03:57:19.926 [info] Got delay-shutdown request while in shutdown timeout, delaying
+2023-12-11 03:57:19.926 [info] Cancelling previous shutdown timeout
+2023-12-11 03:57:20.077 [info] [127.0.0.1][53a5be88][ManagementConnection] New connection established.
+2023-12-11 03:57:20.146 [info] [127.0.0.1][111cfbe1][ExtensionHostConnection] New connection established.
+2023-12-11 03:57:20.171 [info] [127.0.0.1][111cfbe1][ExtensionHostConnection] <238307> Launched Extension Host Process.
+2023-12-11 03:57:24.510 [info] [127.0.0.1][53a5be88][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2023-12-11 03:57:24.548 [info] [127.0.0.1][111cfbe1][ExtensionHostConnection] <238307> Extension Host Process exited with code: 0, signal: null.
+2023-12-11 03:57:24.549 [info] Cancelling previous shutdown timeout
+2023-12-11 03:57:24.549 [info] Last EH closed, waiting before shutting down
+2023-12-11 04:02:24.554 [info] Last EH closed, shutting down

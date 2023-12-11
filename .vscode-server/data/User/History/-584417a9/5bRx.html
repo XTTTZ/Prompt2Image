@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt2Image</title>
+    <style>
+        .center-label {
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        h1 {
+            margin-bottom: 0.5em;
+        }
+
+        form {
+            text-align: center;
+            margin: 1em;
+        }
+
+        label {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        input {
+            padding: 0.5em;
+            margin: 0.5em 0;
+            width: 60%;
+        }
+
+        button {
+            padding: 0.5em 1em;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #generatedImages {
+            text-align: center;
+            margin: 1em;
+            padding: 1em;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Prompt2Image</h1>
+    </header>
+
+    <form id="searchForm">
+        <label for="searchInput">Prompt：</label>
+        <input type="text" id="searchInput" name="searchInput">
+        <button type="button" onclick="performSearch()">Run</button>
+    </form>
+    <label>
+        <p>It will take 1~2 minutes to generate the picture. Please wait patiently.</p>
+    </label>
+    <label id="timeValue"></label>
+
+    <div id="searchResult"></div>
+
+    <!-- Display generated images -->
+    <div style="display:none" id="generatedImages"></div>
+
+    <button id="downloadButton" onclick="downloadImages()" style="display:none">Download Images</button>
+
+    <script>
+        var server_addr = '34.41.197.174';
+        var ip_addr;
+        var second = 0;
+        var clock;
+        fetch('http://' + server_addr + '/ip', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+        })
+            .then(response => { return response.json() })
+            .then(data => {
+                ip_addr = data.ip_addr;
+                console.log('ip_addr');
+            }
+            );
+        function startTimer() {
+            clearInterval(clock);
+            clock = setInterval(timer, 1000);
+            second = 0;
+            timeValue.style.display = 'block';
+            document.getElementById('timeValue').innerText = 'Run Time: ' + second + 's';
+        }
+
+        function timer() {
+            second++;
+            document.getElementById('timeValue').innerText = 'Run Time: ' + second + 's';
+        }
+
+        function stopTimer() {
+            clearInterval(clock);
+            clock = null;
+            console.log('timerstop');
+            document.getElementById('timeValue').innerText = 'Run Time: ' + second + 's';
+        }
+
+        function performSearch() {
+            var searchInput = document.getElementById('searchInput').value;
+            if (searchInput == '') {
+                document.getElementById('timeValue').innerText = 'Please type your prompt!';
+            }
+            else {
+                document.getElementById('generatedImages').style.display = 'none';
+                document.getElementById('downloadButton').style.display = 'none';
+                fetch('http://' + server_addr + ':5000/search', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: 'text=' + encodeURIComponent(searchInput)
+                })
+                    .then(response => {
+                        return response.json();
+                    })
+                    .then(data => { checkStatusPic() });
+                startTimer();
+            }
+        }
+
+        function checkStatusPic() {
+            stopTimer();
+            var generatedImagesContainer = document.getElementById('generatedImages');
+            var downloadButton = document.getElementById('downloadButton');
+
+            // Clear previous content
+            generatedImagesContainer.innerHTML = '';
+
+            // Append image elements dynamically
+            var img = document.createElement('img');
+            img.src = '';
+            generatedImagesContainer.appendChild(img);
+            img.src = 'http://' + server_addr + '/image/' + ip_addr + '/0';
+            generatedImagesContainer.appendChild(img);
+            // Display the container and download button
+            generatedImagesContainer.style.display = 'block';
+            downloadButton.style.display = 'block';
+        }
+
+        function downloadImages() {
+
+
+            // Create a link element for each image and trigger download
+            imageUrls.forEach(function (url, index) {
+                var a = document.createElement('a');
+                a.href = url;
+                a.download = 'generated_image_' + (index + 1) + '.png';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            });
+        }
+    </script>
+</body>
+
+</html>

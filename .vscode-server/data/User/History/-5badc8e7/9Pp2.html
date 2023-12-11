@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt2Image</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        h1 {
+            margin-bottom: 0.5em;
+        }
+
+        form {
+            text-align: center;
+            margin: 1em;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            padding: 0.5em;
+            margin: 0.5em 0;
+            width: 60%;
+        }
+
+        button {
+            padding: 0.5em 1em;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #searchResult {
+            margin: 1em;
+            padding: 1em;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Prompt2Image</h1>
+    </header>
+
+    <form id="searchForm">
+        <label for="searchInput">Prompt：</label>
+        <input type="text" id="searchInput" name="searchInput">
+        <button type="button" onclick="performSearch()">Run</button>
+    </form>
+
+    <div id="searchResult"></div>
+
+    <script>
+        function performSearch() {
+            var searchInput = document.getElementById('searchInput').value;
+            document.getElementById('searchResult').innerHTML = '搜索结果：' + result.message + result.Time_used;
+
+
+            // 使用AJAX发送搜索内容到后端
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/search', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // 处理从后端返回的结果
+                    var result = JSON.parse(xhr.responseText);
+                    document.getElementById('searchResult').innerHTML = '搜索结果：' + result.message + result.Time_used;
+                }
+            };
+            xhr.send(JSON.stringify({ query: searchInput }));
+        }
+    </script>
+</body>
+
+</html>
