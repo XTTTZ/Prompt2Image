@@ -1,9 +1,0 @@
-2023-11-30 19:50:18.240 [info] 试验“pythonRecommendTensorboardExtcf”处于活动状态
-2023-11-30 19:50:18.240 [info] 试验“pythonREPLSmartSend”处于活动状态
-2023-11-30 19:50:18.240 [info] 试验“pythonTestAdapter”处于活动状态
-2023-11-30 19:50:18.311 [info] Default formatter is set to ms-python.autopep8 for workspace /home/tianyi
-2023-11-30 19:50:18.759 [info] Test server listening.
-2023-11-30 19:50:18.760 [info] Python 解释器路径: /bin/python3
-2023-11-30 19:50:19.127 [info] > /usr/bin/python3 -I ./.vscode-server/extensions/ms-python.python-2023.20.0/pythonFiles/get_output_via_markers.py ./.vscode-server/extensions/ms-python.python-2023.20.0/pythonFiles/interpreterInfo.py
-2023-11-30 19:50:21.023 [info] 正在启动 Pylance 语言服务器。
-2023-11-30 19:50:39.181 [info] Python 解释器路径: /usr/bin/python3

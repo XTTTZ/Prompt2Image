@@ -1,4 +1,0 @@
-2023-12-11 04:47:41.436 [info] 日志级别: Info
-2023-12-11 04:47:41.436 [info] 正在验证在以下位置找到的 git: "git"
-2023-12-11 04:47:41.436 [warning] Unable to find git. Error: spawn git ENOENT
-2023-12-11 04:47:41.436 [warning] Git installation not found.

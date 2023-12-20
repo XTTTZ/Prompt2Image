@@ -1,7 +1,0 @@
-2023-12-01 00:19:54.312 [info] 试验“pythonRecommendTensorboardExtcf”处于活动状态
-2023-12-01 00:19:54.312 [info] 试验“pythonREPLSmartSend”处于活动状态
-2023-12-01 00:19:54.312 [info] 试验“pythonTestAdapter”处于活动状态
-2023-12-01 00:19:54.347 [info] Default formatter is set to ms-python.autopep8 for workspace /home/tianyi
-2023-12-01 00:19:54.776 [info] Test server listening.
-2023-12-01 00:19:54.777 [info] Python 解释器路径: /bin/python3
-2023-12-01 00:19:57.058 [info] 正在启动 Pylance 语言服务器。
