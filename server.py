@@ -36,4 +36,4 @@ def download_image(ip,num):
     return send_file(image_path, as_attachment=True)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=80, threaded=False, processes=False)
+    app.run(host='0.0.0.0',port=80, threaded=False, processes=False)#34.72.227.197
