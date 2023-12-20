@@ -11,9 +11,14 @@ from multiprocessing import Process
 import threading
 import asyncio
 from flask_cors import CORS, cross_origin
-
+import random
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
+def set_seed(seed):
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    random.seed(seed)
+    np.random.seed(seed)
 
 def save_image(images, path):
     if not os.path.exists(path):
@@ -57,6 +62,7 @@ def search():
 
 
 if __name__ == '__main__':
+    set_seed(42)
     model = MinDalle(
     dtype=getattr(torch, dtype),
     device='cpu',

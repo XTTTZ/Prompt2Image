@@ -131,6 +131,7 @@
         var ip_addr;
         var second = 0;
         var clock;
+        var picsequence = 0;
         fetch('http://' + server_addr + '/ip', {
             method: 'GET',
             headers: {
@@ -182,14 +183,14 @@
                     body: 'text=' + encodeURIComponent(searchInput)
                 })
                     .then(response => {
+                        checkStatusPic()
                         return response.json();
-                    })
-                    .then(data => { checkStatusPic() });
+                    });
                 startTimer();
             }
         }
 
-        function checkStatusPic() {
+        function weq2() {
             stopTimer();
             var generatedImagesContainer = document.getElementById('generatedImages');
             var downloadButton = document.getElementById('downloadButton');
@@ -200,11 +201,40 @@
             // Append image elements dynamically
             var img = document.createElement('img');
             img.src = 'http://' + server_addr + '/image/' + ip_addr + '/0?time=' + new Date().getTime();
+            console.log(img.src);
             generatedImagesContainer.appendChild(img);
             // Display the container and download button
+
             generatedImagesContainer.style.display = 'block';
             downloadButton.style.display = 'block';
         }
+
+        function checkStatusPic() {
+            var generatedImagesContainer = document.getElementById('generatedImages');
+            var downloadButton = document.getElementById('downloadButton');
+
+            // Clear previous content
+            generatedImagesContainer.innerHTML = '';
+
+            // Pre-load image
+            var preloadImg = new Image();
+            var imageUrl = 'http://' + server_addr + '/image/' + ip_addr + '/0?time=' + new Date().getTime();
+            preloadImg.src = imageUrl;
+
+            // Once the image is loaded, set it as the source of the img element
+            preloadImg.onload = function () {
+                var img = document.createElement('img');
+                img.src = imageUrl;
+                console.log(img.src);
+                generatedImagesContainer.appendChild(img);
+
+                // Display the container and download button
+                generatedImagesContainer.style.display = 'block';
+                downloadButton.style.display = 'block';
+            };
+            stopTimer();
+        }
+
 
         function downloadImages() {
             // Create a link element for each image and trigger download
