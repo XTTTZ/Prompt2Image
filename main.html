@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt2Image</title>
+</head>
+
+<body>
+    <h1>Prompt2Image</h1>
+    <form id="searchForm">
+        <label for="searchInput">Prompt：</label>
+        <input type="text" id="searchInput" name="searchInput">
+        <button type="button" onclick="performSearch()">run</button>
+    </form>
+
+    <div id="searchResult"></div>
+
+    <script>
+        function performSearch() {
+            var searchInput = document.getElementById('searchInput').value;
+
+            // 使用AJAX发送搜索内容到后端
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/search', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // 处理从后端返回的结果
+                    var result = JSON.parse(xhr.responseText);
+                    document.getElementById('searchResult').innerHTML = '搜索结果：' + result.message + result.Time_used;
+                }
+            };
+            xhr.send(JSON.stringify({ query: searchInput }));
+        }
+    </script>
+</body>
+
+</html>
