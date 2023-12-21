@@ -14,9 +14,6 @@ import asyncio
 
 app = Flask(__name__)
 
-def test():
-    time.sleep(10)
-
 class info:
     ip=''
 info=info()
